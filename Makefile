@@ -1,0 +1,4 @@
+YARN := yarn
+
+deps:
+	$(YARN)

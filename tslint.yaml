@@ -1,0 +1,13 @@
+extends:
+  - './node_modules/tslint-config-fluct/config/basic.json'
+  - './node_modules/tslint-config-fluct/config/typecheck.json'
+defaultSeverity: 'warn'
+
+rules:
+  no-default-export: false
+
+  # should be true after https://github.com/palantir/tslint/pull/3605 implemented
+  no-magic-numbers: false
+
+  # should be true when https://github.com/palantir/tslint/issues/3364 is resolved
+  no-implicit-dependencies: false
