@@ -11,6 +11,10 @@ clean:
 build: clean deps
 	ENV_FILE=.env.production $(YARN) run build
 
+serve:
+	cp -r ../credentials dist
+	node dist/main.js
+
 deploy: build copy-service-account
 	cp package.json yarn.lock dist
 	cp app.yaml .gcloudignore dist

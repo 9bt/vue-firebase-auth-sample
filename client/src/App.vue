@@ -5,10 +5,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, SetupContext } from '@vue/composition-api';
+import { defineComponent, SetupContext, provide } from '@vue/composition-api';
+
+import useUser, { UserKey } from '@/composables/user';
 
 export default defineComponent({
   setup(props: {}, context: SetupContext) {
+    provide(UserKey, useUser());
+
     return {};
   },
 });

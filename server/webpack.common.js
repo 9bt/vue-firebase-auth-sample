@@ -27,6 +27,7 @@ module.exports = {
     new webpack.DefinePlugin({
       CLIENT_BASE_PATH: JSON.stringify(process.env.CLIENT_BASE_PATH),
       SERVER_BASE_PATH: JSON.stringify(process.env.SERVER_BASE_PATH),
+      FIREBASE_PROJECT_ID: JSON.stringify(process.env.FIREBASE_PROJECT_ID),
     }),
   ],
   module: {
